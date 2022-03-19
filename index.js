@@ -1,15 +1,3 @@
-const express = require('express');
-
-const server = express();
-
-server.get('/', (req, res) => {
-    res.send('Your bot is running!');
-});
-
-server.listen(8080, () => {
-    console.log("listen");
-});
-
 const Entbot = require("entbot");
 const bot = new Entbot();
 
