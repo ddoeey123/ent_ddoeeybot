@@ -9,7 +9,7 @@ bot.addEventListener("error", function(message){
     console.log(`오류: ${message}`);
 });
 
-bot.login("님 아이디", process.env.pass)
+bot.login("ddoeeybot123", process.env.pass)
 .then(function(bot){
     const app = bot.createApp();
 
@@ -18,15 +18,9 @@ bot.login("님 아이디", process.env.pass)
         console.log(message, data);
 
         const t = message;
-        if (t == ".안녕") {
-            app.reply(data.id, "안녕하세요!");
-        } else if (t == ".현재시각") {
-            const delta = 9 * 3600 * 1000;
-            const date = new Date(+new Date() + delta);
-            const hour = date.getHours().toString().padStart(2, "0");
-            const minute = date.getMinutes().toString().padStart(2, "0");
-            app.reply(data.id, `현재 시각은 ${date.getMonth()+1}월 ${date.getDate()}일 ${hour}:${minute}`);
-        }
+        if (t == ".또이봇 안녕") {
+            app.reply(data.id, "안녕하세요. 또이봇이에요!");
+        } 
     });
 
     app.run();
