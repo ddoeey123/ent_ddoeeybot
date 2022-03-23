@@ -1,3 +1,6 @@
+const http = require('http');
+http.createServer((req, res) => { res.end('24시간 돌리는중!'); }).listen(8080);
+
 const Entbot = require("entbot");
 const bot = new Entbot();
 
